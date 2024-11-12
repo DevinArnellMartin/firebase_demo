@@ -36,6 +36,8 @@ class InventoryApp extends StatelessWidget {
   }
 }
 class AuthWrapper extends StatelessWidget {
+  const AuthWrapper({super.key});
+
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<User?>(
@@ -55,6 +57,8 @@ class AuthWrapper extends StatelessWidget {
 class LoginPage extends StatelessWidget {
   final FirebaseAuth auth = FirebaseAuth.instance;
   final GoogleSignIn signIn = GoogleSignIn();
+
+  LoginPage({super.key});
 
   Future<void> signInWithGoogle() async {
     final GoogleSignInAccount? googleUser = await signIn.signIn();
@@ -168,6 +172,8 @@ class IHPState extends State<InventoryHomePage> {
 }
 
 class InventoryList extends StatefulWidget {
+  const InventoryList({super.key});
+
   @override
   IlistState createState() => IlistState();
 }
